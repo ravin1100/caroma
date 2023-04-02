@@ -18,3 +18,30 @@ let adminArr = [
 ];
 
 localStorage.setItem("adminUsers", JSON.stringify(adminArr));
+
+let emailEl = document.getElementById("mail");
+let passwordEl = document.getElementById("pass");
+let loginBtn = document.getElementById("reg");
+
+loginBtn.addEventListener("click", (e) => {
+  let email = emailEl.value;
+  let password = passwordEl.value;
+  let isEmailThere = false;
+  let isPswdThere = false;
+  for (let i = 0; i < adminArr.length; i++) {
+    for (let j = 0; j < adminArr.length; j++) {
+      if (email == adminArr[i].email) {
+        isEmailThere = true;
+      }
+      if (password == adminArr[i].password) {
+        isPswdThere = true;
+      }
+    }
+  }
+  if (isEmailThere && isPswdThere) {
+    alert("Admin Login Successful");
+    window.location.href = "./admin.html";
+  } else {
+    alert("Enter Correct Login Credentials");
+  }
+});

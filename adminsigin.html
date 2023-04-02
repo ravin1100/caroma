@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <title>Log In Page</title> -->
     <title>Caroma A Tanishq Partnership</title>
+    <link rel="icon" href="img/pplogo.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap"
       rel="stylesheet"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="icon" href="img/pplogo.png" />
-    <link rel="stylesheet" href="styles/signin.css" />
+    <link rel="stylesheet" href="./styles/adminSignin.css" />
     <style></style>
   </head>
   <body>
@@ -118,14 +119,14 @@
                 /></a>
               </div>
               <div class="pnav2-4">
-                <a href="">
+                <a href="./wishlist.html">
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/2030/2030957.png"
                     alt=""
                 /></a>
               </div>
               <div class="pnav2-4">
-                <a href="">
+                <a href="./cartpage.html">
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/60/60756.png"
                     alt=""
@@ -156,52 +157,54 @@
       </div>
     </nav>
     <!-- ------------end nav bar ------------------------>
-    <div id="container">
-      <h3 class="hr-sect" id="head">Log In to Caroma</h3>
-      <p id="use">USING</p>
-      <button class="social facebook">
-        <a
-          id="goog"
-          href="https://www.facebook.com/"
-          target="_blank"
-          id="pfb"
-          style="color: white"
-          >Facebook</a
-        >
-      </button>
-      <button class="social googlee">
-        <a
-          id="goog"
-          href="https://accounts.google.com/"
-          target="_blank"
-          id="pg"
-          style="color: white"
-          >Google</a
-        >
-      </button>
-      <p id="use">OR</p>
-      <p class="subhead">Admin Email</p>
-      <input class="blkin" type="email" id="mail" />
-      <p class="subhead">Admin Password</p>
-      <input class="blkin" type="password" id="pass" />
-      <button id="reg" id="insubmit" onclick="openPopup()">
-        Log In to Continue
-      </button>
-      <!----------popup ------->
-      <!-- <div class="popup" id="popup">
-            <img src="img/ptick.png" alt="">
-            <h2>Login Successful!</h2>
-             <button type="button" onclick="closePopup()" >OK</button>
-            </div> -->
-      <!------- end popup------ -->
-      <!-- <div id="last">
-        <div>New to Caroma?</div>
-        <div><a id="sign" href="signup.html">Create an account</a></div>
+    <div id="back">
+      <div id="container">
+        <h3 class="hr-sect" id="head">Log In to Caroma</h3>
+        <p id="use">USING</p>
+        <button class="social facebook">
+          <a
+            id="goog"
+            href="https://www.facebook.com/"
+            target="_blank"
+            id="pfb"
+            style="color: white"
+            >Facebook</a
+          >
+        </button>
+        <button class="social googlee">
+          <a
+            id="goog"
+            href="https://accounts.google.com/"
+            target="_blank"
+            id="pg"
+            style="color: white"
+            >Google</a
+          >
+        </button>
+        <p id="use">OR</p>
+        <p class="subhead">Admin E-mail</p>
+        <input class="blkin" type="email" id="mail" />
+        <p class="subhead">Admin Password</p>
+        <input class="blkin" type="password" id="pass" />
+        <button id="reg" id="insubmit" onclick="openPopup()">
+          Log In to Continue
+        </button>
+        <!----------popup ------->
+        <!-- <div class="popup" id="popup">
+              <img src="img/ptick.png" alt="">
+              <h2>Login Successful!</h2>
+               <button type="button" onclick="closePopup()" >OK</button>
+              </div> -->
+        <!------- end popup------ -->
+        <!-- <div id="last">
+          <div>New to Caroma?</div>
+          <div><a id="sign" href="signup.html">Create an account</a></div>
+        </div>
+        <div id="a-last">
+          <div>Are you Admin?</div>
+          <div><a id="a-sign" href="adminsigin.html">Click to login</a></div>
+        </div> -->
       </div>
-      <div id="a-last">
-        <div>Are you Admin?</div>
-        <div><a id="a-sign" href="adminsigin.html">Click to login</a></div>
-      </div> -->
     </div>
     <!----------------------- ENd of body-------------------------- -->
     <!---------------------- Footer-------------------------------------- -->
@@ -536,4 +539,4 @@
     }, 1000);
   })();
 </script>
-<script src="scripts/signin.js"></script>
+<script src="./scripts/adminSignin.js"></script>

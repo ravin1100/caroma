@@ -1,21 +1,22 @@
-var success_popup = document.getElementById("success");
+// var success_popup = document.getElementById("success");
 var error_popup = document.getElementById("error");
 var s_close = document.getElementById("s_button");
 var e_close = document.getElementById("e_button");
 var s_btn = document.getElementById("success_trigger");
 var e_btn = document.getElementById("error_trigger");
-s_btn.onclick = function () {
-  success_popup.style.display = "block";
-};
-e_btn.onclick = function () {
-  error_popup.style.display = "block";
-};
-s_close.onclick = function () {
-  success_popup.style.display = "none";
-};
-e_close.onclick = function () {
-  error_popup.style.display = "none";
-};
+var popup = document.getElementById("popup");
+// s_btn.onclick = function () {
+//   success_popup.style.display = "block";
+// };
+// e_btn.onclick = function () {
+//   error_popup.style.display = "block";
+// };
+// s_close.onclick = function () {
+//   success_popup.style.display = "none";
+// };
+// e_close.onclick = function () {
+//   error_popup.style.display = "none";
+// };
 
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
@@ -38,24 +39,32 @@ function checkoutFunction() {
   console.log(cardname, cardnum, carddate, cv);
 
   // console.log(cardname.length)
-
-  if (cardname.length < 1 || cardname.length > 20) {
-    alert("Enter Name Correct");
-  } else if (cv.length != 3) {
-    alert("Enter Correct CVV");
+  let flag = false;
+  if (cardname.length < 3) {
+    alert("Enter Correct Name");
   } else if (cardnum.length != 16) {
     alert("Enter Correct Number");
+  } else if (cv.length != 3) {
+    alert("Enter Correct CVV");
   } else {
-    alert("Payment Successfull");
+    // alert("Payment Successfull");
+    flag = true;
+    openPopup();
 
     //window.location.href="checkout.html";
   }
+}
 
-  var ask = window.confirm("Go to home page");
+function openPopup() {
+  popup.classList.add("open-popup");
+}
+function closePopup() {
+  popup.classList.remove("open-popup");
+  if (true) {
+    var ask = window.confirm("Go to home page");
 
-  if (ask) {
-    // window.alert("Th");
-
-    window.location.href = "index.html";
+    if (ask) {
+      window.location.href = "index.html";
+    }
   }
 }

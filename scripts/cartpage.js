@@ -113,6 +113,7 @@ function display(arr) {
     });
   }
   let sumbill = sum.toLocaleString("en-IN");
+  localStorage.setItem("totalSum", JSON.stringify(sumbill));
   for (let i = 0; i < totalBill.length; i++) {
     totalBill[i].innerText = `₹${sumbill}`;
   }
@@ -129,6 +130,7 @@ function display(arr) {
       gprice[i].innerText = changedPrice;
       sumprice();
       sumbill = sum.toLocaleString("en-IN");
+      localStorage.setItem("totalSum", JSON.stringify(sumbill));
       for (let i = 0; i < totalBill.length; i++) {
         totalBill[i].innerText = `₹${sumbill}`;
       }

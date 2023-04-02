@@ -467,3 +467,10 @@ nav > :nth-child(4) img {
   margin-left: -40%;
   margin-top: 20px;
 }
+
+@media only screen and (max-width: 992px) {
+  #middle {
+    display: flex;
+    flex-direction: column;
+  }
+} ;

@@ -5,15 +5,16 @@ let radioBtns = document.getElementsByClassName("price-select");
 let countEl = document.getElementById("count-item");
 
 let allData = [];
-
+let arr = JSON.parse(localStorage.getItem("products")) || [];
 // ..............fetching data from db.json................
 
 fetch("./db.json")
   .then((res) => res.json())
   .then((data) => {
-    allData = data;
-
-    renderData(data);
+    allData = [...data, ...arr];
+    console.log(allData);
+    // localStorage.setItem("products-Initial", JSON.stringify(allData));
+    renderData(allData);
   });
 
 // .............sort functionality.........................
